@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta starts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="auther" content="zaid saeh">
+    <meta name="keywords" content="javascrip, css, html">
+    <meta name="discription" content="this is my Portfolio for Tap Company">
+    <!-- meta ends -->
+    <!-- css fontawesome starts -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- css fontawesome ends -->
+    <!-- css style link starts -->
+    <link rel="stylesheet" href="css/portfolio.css">
+    <!-- css style link ends-->
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Title of the page start  -->
+    <title>Portfolio</title>
+    <!-- Title of the page ends  -->
+</head>
+
+<body>
+    <!-- header starts -->
+
+    <header class="header" id="home">
+        <nav class="navbar">
+            <input class="list-toggle" id="menu-toggle" type="checkbox">
+            <label for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+            <ul class="navbar-list">
+                <li class="home"><a href="#home"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li class="about-me"><a href="#about-me"><i class="fa-solid fa-user"></i><span>About Me</span></a></li>
+                <li class="content-me"><a href="#contact-me"><i class="fa-solid fa-phone"></i><span>Contact
+                            Me</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header ends -->
+    <section class="about-me-section" id="about-me">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-text">
+                        <h2 class="card-header">welcome to my site</h2>
+                        <h2 class="card-title">Hi, I'm Zaid, an <span>Electrical Engineer</span> with a passion for
+                            programming.</h2>
+                        <p class="card-paragraph-one">Experienced Office Manager and administration professional with 2
+                            years of
+                            experience overseeing wide variety of administrative functions essential to
+                            business operations.
+                        </p>
+                        <input type="checkbox" class="see-more-box" id="see-more" />
+                        <label for="see-more" class="see-more">See more...</label>
+                        <p class="card-paragraph-two">
+                            Optimises productivity, efficiency and service quality
+                            across multiple offices within diverse environments. Highly organised at
+                            prioritising tasks and managing deadlines</p>
+                        <input type="checkbox" class="see-less-box" id="see-less" />
+                        <label for="see-more" class="see-less">See less</label>
+                    </div>
+                    <img class="card-img" src="images/Zaidprofile.png" />
+                </div>
+                <div class="card-footer">
+                    <button class="btn hire-me">hire me!</button>
+                    <a href="#projects"><button class="btn projects">see my projects</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- projects section starts -->
+    <section class="projects-section" id="projects">
+        <div class="project-title-div"><h2 class="project-title">Projects</h2></div>
+        <div class="container">
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="https://darling-pony-947827.netlify.app/" target="_blank"><img
+                                src="images/project-one.png" class="project-one" />
+                            <div class="text">
+                                <p class="project-text">Article Site</p>
+                                <p class="project-description">created by using react and redux framworks</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href="https://whimsical-naiad-aa27d6.netlify.app/" target="_blank"><img
+                            src="images/project-two.png" class="project-two" />
+                        <div class="text">
+                            <p class="project-text">youtuby</p>
+                            <p class="project-description">created by using bootstrap 5 framwork</p>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href="https://magnificent-sunshine-e44d88.netlify.app/" target="_blank"><img
+                            src="images/project-four.png" class="project-two" />
+                        <div class="text">
+                            <p class="project-text">Store</p>
+                            <p class="project-description">created by using bootstrap 5 framwork</p>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <a href="https://precious-lebkuchen-987695.netlify.app/" target="_blank"><img
+                            src="images/project-three.png" class="project-two" />
+                        <div class="text">
+                            <p class="project-text">Company</p>
+                            <p class="project-description">created by using bootstrap 5 framwork</p>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- projects section ends -->
+    <!-- footer starts -->
+    <footer id="contact-me" class="contact-me-section">
+        <div class="container">
+            <div class="contact-me-div"><h2 class="contact-me-title">Contact Me</h2></div>
+            <div class="box-container">
+                <div class="box">
+                    <div class="communication-ways">
+                        <div class="phone-box">
+                            <i class="fa-solid fa-phone"></i>
+                            <p class="phone">00970-599206572</p>
+                        </div>
+                        <div class="email-box">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p class="email">zaidsaeh3@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <a class="facebook" href="https://www.facebook.com/zaid.alsayeh" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a class="linkedin" href="https://www.linkedin.com/in/zaid-sayeh-564000124/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                        <a class="twitter" href="https://twitter.com/Nablusi12" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="box-two">
+                    <input type="text" placeholder="name" />
+                    <input type="email" placeholder="email" />
+                    <textarea rows="40" cols="50" placeholder="write an email..."></textarea>
+                    <button class="btn send">Send</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer ends -->
+    <script src="index.js"></script>
+    <script src="java/all.min.js"></script>
+</body>
+
+</html>

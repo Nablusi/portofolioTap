@@ -1,0 +1,844 @@
+/* general edit  starts*/
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+:root {
+    --main-color: #D1884F;
+    --aboutme-color: #008AAA;
+    --text-color: #3BBADB;
+    --black-color: black;
+    --white-color: #ffffff;
+    --background: #f3f3f3;
+    --facebook: #0866ff;
+    --linkedin: #0a66c2;
+    --twitter: #1d9bf0;
+
+}
+
+@media screen and (min-width:549px) and (max-width: 991px) {
+    .header .navbar {
+        display: flex;
+        justify-content: center !important;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width: 548px) {
+    .header .navbar .navbar-list {
+        font-size: 16px;
+    }
+
+    .header {
+        margin: 20px 50px !important;
+    }
+
+    .header .navbar {
+        display: flex;
+        justify-content: center !important;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .header {
+        margin: 20px !important;
+    }
+
+    .header .navbar {
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
+
+    .header .navbar .navbar-list {
+        display: none !important;
+        justify-content: left !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        margin-top: 30px;
+        transition: 0.3s;
+
+    }
+
+    .header .fa-bars,
+    .header input {
+        display: block !important;
+    }
+}
+
+
+
+
+
+
+
+/* general edit  ends*/
+
+/* header starts */
+.header {
+    margin: 20px 100px;
+    position: relative;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.header .navbar .navbar-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 25px;
+    transition: 0.3s;
+}
+
+
+
+
+.header .navbar .navbar-list a {
+    text-decoration: none;
+    color: var(--black-color);
+    transition: 0.3s;
+}
+
+.header .navbar .navbar-list span {
+    margin-left: 10px;
+}
+
+.header .navbar .navbar-list a:hover {
+    color: var(--main-color);
+}
+
+/* barlist start */
+.header .fa-bars,
+.header .list-toggle {
+    display: none;
+}
+
+.header .fa-bars:hover {
+    color: var(--main-color);
+}
+
+.header .fa-bars {
+    position: absolute;
+    left: 3px;
+    cursor: pointer;
+}
+
+.header input {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+
+.header .navbar input:checked~.navbar-list {
+    display: flex !important;
+    visibility: 0.5;
+    transition: 0.3s;
+}
+
+.navbar-list a:active,
+.navbar-list a:focus
+{
+    color: var(--main-color) !important;
+}
+
+/* .navbar-list .home{
+    color: var(--main-color);
+} */
+
+/* barlist end */
+/* header ends */
+
+/* about me starts */
+.about-me-section {
+    padding: 50px 0px;
+}
+
+.about-me-section .container {
+    margin: 20px 100px;
+}
+
+.about-me-section .container .card .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.about-me-section .container .card .card-body .card-header {
+    margin-bottom: 25px;
+    color: var(--text-color);
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.about-me-section .container .card .card-body .card-text {
+    width: 60%;
+}
+
+.about-me-section .container .card .card-body .card-text .card-title {
+    color: var(--aboutme-color);
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.about-me-section .container .card .card-body .card-text .card-title span {
+    color: var(--main-color);
+}
+
+
+.about-me-section .container .card .card-body .card-text .see-more,
+.about-me-section .container .card .card-body .card-text .see-less {
+    color: var(--text-color);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+.about-me-section .container .card .card-body .card-text .see-more-box {
+    display: none;
+}
+
+.about-me-section .container .card .card-body .card-text .see-more:hover {
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+
+
+
+/* see more and see less styling start*/
+
+.about-me-section .container .card .card-body .card-text .card-paragraph-two {
+    display: none;
+}
+
+.about-me-section .container .card .card-body .card-text .see-more-box:checked~.card-paragraph-two {
+    display: block;
+    transition: 0.3s;
+}
+
+.about-me-section .container .card .card-body .card-text .see-more-box:checked~.see-more {
+    display: none;
+    transition: 0.3s;
+}
+
+.about-me-section .container .card .card-body .card-text .see-more-box:checked~.see-less {
+    display: block;
+    transition: 0.3s;
+}
+
+.about-me-section .container .card .card-body .card-text .see-less-box:checked~.card-paragraph-two {
+    display: none;
+    transition: 0.3s;
+}
+
+.about-me-section .container .card .card-body .card-text .see-less-box {
+    display: none;
+    transition: 0.3s;
+}
+
+.about-me-section .container .card .card-body .card-text .see-less {
+    display: none;
+    transition: 0.3s;
+}
+
+.about-me-section .container .card .card-body .card-text .see-less:hover {
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+
+.about-me-section .container .card .card-body .card-img {
+    border-bottom-left-radius: 50%;
+    box-shadow: -15px 2px 1px -3px;
+    color: var(--text-color);
+    height: fit-content;
+    position: relative;
+}
+
+
+/* see more and see less styling ends */
+
+
+/* about me button starts */
+.about-me-section .container .card .btn.hire-me:active,
+.about-me-section .container .card .btn.projects:active,
+.about-me-section .container .card .btn.hire-me:focus,
+.about-me-section .container .card .btn.projects:focus {
+    color: var(--white-color);
+    background-color: var(--text-color);
+    transition: 0.3s;
+
+}
+
+.about-me-section .container .card .btn.projects,
+.about-me-section .container .card .btn.hire-me {
+    border: 1px solid var(--text-color);
+    text-align: center;
+    display: inline-block;
+    padding: 14px;
+    width: 150px;
+    margin: 7px;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    border-radius: 8px;
+    font-family: "proxima-nova-soft", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: box-shadow 200ms ease-out;
+    text-transform: capitalize;
+}
+
+/* about me button ends */
+
+
+/* media for card starts */
+@media (min-width:768px) and (max-width:991px) {
+    .about-me-section .container .card .card-body {
+        flex-direction: column-reverse;
+        justify-content: center;
+        position: relative;
+    }
+
+    .about-me-section .container .card .card-body .card-header {
+        position: absolute;
+        top: -37px;
+        left: 0;
+    }
+
+
+    .about-me-section .container .card .card-body .card-img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        box-shadow: -2px 4px 3px 0px;
+        border: var(--text-color) 2px solid;
+        margin: 0px auto;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+
+    .about-me-section .container .card .card-body .card-text {
+        width: 100%;
+        text-align: justify;
+        padding-top: 20px;
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    .about-me-section .container .card .card-footer {
+        text-align: center;
+    }
+
+    .about-me-section .container .card .card-body::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 1px solid var(--text-color);
+        border-radius: 10px;
+        z-index: -1;
+        top: 140px;
+    }
+}
+
+@media (min-width:595px) and (max-width:768px) {
+    .about-me-section .container .card .card-body {
+        flex-direction: column-reverse;
+        justify-content: center;
+        position: relative;
+    }
+
+    .about-me-section .container .card .card-body .card-header {
+        position: absolute;
+        top: -37px;
+        left: 0;
+    }
+
+
+    .about-me-section .container .card .card-body .card-img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        box-shadow: -2px 4px 3px 0px;
+        border: var(--text-color) 2px solid;
+        margin: 0px auto;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+
+    .about-me-section .container .card .card-body .card-text {
+        width: 100%;
+        text-align: justify;
+        padding-top: 20px;
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    .about-me-section .container .card .card-footer {
+        text-align: center;
+    }
+
+    .about-me-section .container .card .card-body::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 1px solid var(--text-color);
+        border-radius: 10px;
+        z-index: -1;
+        top: 140px;
+    }
+}
+
+@media (max-width:594px) {
+    .about-me-section .container {
+        margin: 10px 25px;
+    }
+
+    .about-me-section .container .card .card-body {
+        flex-direction: column-reverse;
+        justify-content: center;
+        position: relative;
+    }
+
+    .about-me-section .container .card .card-body .card-header {
+        position: absolute;
+        top: -37px;
+        left: 0;
+    }
+
+
+    .about-me-section .container .card .card-body .card-img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        box-shadow: -2px 4px 3px 0px;
+        border: var(--text-color) 2px solid;
+        margin: 0px auto;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+
+    .about-me-section .container .card .card-body .card-text {
+        width: 100%;
+        padding-top: 20px;
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    .about-me-section .container .card .card-body .card-text .card-title,
+    .about-me-section .container .card .card-body .card-text .card-paragraph-one,
+    .about-me-section .container .card .card-body .card-text .card-paragraph-two {
+        font-size: 15px;
+    }
+
+    .about-me-section .container .card .card-body .see-less,
+    .about-me-section .container .card .card-body .see-more {
+        font-size: 12px;
+    }
+
+
+    .about-me-section .container .card .card-footer {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .about-me-section .container .card .card-body::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 106%;
+        background-color: transparent;
+        border: 1px solid var(--text-color);
+        border-radius: 10px;
+        z-index: -1;
+        top: 100px;
+    }
+}
+
+/* media for card ends */
+/* about me ends */
+
+/* projects start */
+
+.projects-section {
+    background-color: var(--background);
+    margin: 40px 0;
+    padding-bottom: 50px;
+}
+
+.projects-section .container {
+    margin: 0px 100px;
+}
+
+.projects-section .project-title {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.project-title-div{
+    width:200px;
+    margin:20px auto;
+    position: relative;
+}
+
+.projects-section .project-title::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background-color: var(--text-color);
+    bottom: -12px;
+    left: 0%;
+}
+
+.projects-section .project-title::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    border: 1px solid var(--text-color);
+    bottom: -22px;
+    left: 46%;
+    z-index: 1;
+}
+
+.projects-section .container .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects-section .container .cards-container .card-body {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.projects-section .container .cards-container .card-body img {
+    width: 300px;
+    height: 220px;
+    transform: rotate(0deg) scale(1.0);
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+
+.projects-section .container .cards-container .card-body img:hover~.text {
+    top: 200px;
+    transition: 0.3s;
+}
+
+.projects-section .container .cards-container .card-body img:hover {
+    transform: scale(1.1) rotate(2deg);
+    transition: 0.3s;
+
+}
+
+.projects-section .container .cards-container .card-body .text {
+    position: absolute;
+    top: 500px;
+    background-color: var(--white-color);
+    text-align: center;
+    height: 100px;
+    transition: 0.3s;
+}
+
+.projects-section .container .cards-container .card-body .text:hover {
+    top: 200px;
+    transition: 0.3s;
+}
+
+.projects-section .container .cards-container .card-body .project-text,
+.projects-section .container .cards-container .card-body .project-description {
+    width: 300px;
+}
+
+.projects-section .container .cards-container .card-body .project-text {
+    color: var(--text-color);
+}
+
+.projects-section .container .cards-container .card-body .project-description {
+    color: var(--main-color);
+}
+
+.projects-section .container .cards-container .card {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
+
+@media (max-width: 580px) {
+    .projects-section .container .cards-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .projects-section .container {
+        margin: 0px 25px;
+    }
+}
+
+@media (min-width: 581px) and (max-width: 767px) {
+    .projects-section .container .cards-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .projects-section .container .cards-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+/* projects end */
+
+/* contact me starts */
+.contact-me-section {
+    margin: 40px 0;
+    padding: 30px 0px;
+}
+
+.contact-me-section .container {
+    margin: 0px 100px;
+}
+
+
+
+.contact-me-div{
+    width: 200px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.contact-me-section .container .contact-me-title {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0px auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+.contact-me-section .container .contact-me-title::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background-color: var(--text-color);
+    bottom: -12px;
+    left: 0;
+}
+
+.contact-me-section .container .contact-me-title::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    border: 1px solid var(--text-color);
+    bottom: -22px;
+    left: 46%;
+    z-index: 1;
+}
+
+.contact-me-section .container .box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.contact-me-section .container .box-container .box .communication-ways {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-me-section .container .box-container .box .communication-ways .phone-box,
+.contact-me-section .container .box-container .box .communication-ways .email-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: var(--main-color);
+    gap: 20px;
+
+}
+
+.contact-me-section .container .box-container .box .social-media {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    border-top: solid 1px grey;
+    padding-top: 20px;
+}
+
+
+
+.contact-me-section .container .box-container .box .social-media .facebook,
+.contact-me-section .container .box-container .box .social-media .linkedin,
+.contact-me-section .container .box-container .box .social-media .twitter {
+    color: var(--main-color);
+}
+
+.contact-me-section .container .box-container .box .social-media .facebook:hover {
+    color: var(--facebook);
+    transition: 0.5s;
+}
+
+.contact-me-section .container .box-container .box .social-media .linkedin:hover {
+    color: var(--linkedin);
+    transition: 0.5s;
+}
+
+.contact-me-section .container .box-container .box .social-media .twitter:hover {
+    color: var(--twitter);
+    transition: 0.5s;
+}
+
+
+.contact-me-section .container .box-container .box-two {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.contact-me-section .container .box-container .box-two input,
+.contact-me-section .container .box-container .box-two textarea {
+    width: 500px;
+    height: 40px;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 1px solid var(--main-color);
+}
+
+.contact-me-section .container .box-container .box-two input:active,
+.contact-me-section .container .box-container .box-two textarea:active,
+.contact-me-section .container .box-container .box-two input:focus,
+.contact-me-section .container .box-container .box-two textarea:focus {
+    border: 1px solid var(--text-color);
+}
+
+.contact-me-section .container .box-container .box-two textarea {
+    padding-top: 10px;
+}
+
+.btn.send:active,
+.btn.send:focus {
+    color: var(--white-color);
+    background-color: var(--text-color);
+    transition: 0.3s;
+}
+
+
+.btn.send {
+    border: 1px solid var(--text-color);
+    text-align: center;
+    display: inline-block;
+    padding: 14px;
+    width: 150px;
+    margin: 7px;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    border-radius: 8px;
+    font-family: "proxima-nova-soft", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: box-shadow 200ms ease-out;
+    text-transform: capitalize;
+}
+
+@media (max-width:480px) {
+    .contact-me-section .container .box-container .box-two input,
+    .contact-me-section .container .box-container .box-two textarea {
+        width: 200px;
+    }
+    .contact-me-section .container {
+        margin: 0px 25px;
+    }
+    .contact-me-section .container .box-container .box .social-media{
+        justify-content: center;
+    }
+}
+
+@media (min-width:481px) and (max-width:767px) {
+    .contact-me-section .container .box-container .box-two input,
+    .contact-me-section .container .box-container .box-two textarea {
+        width: 250px;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .contact-me-section .container .box-container .box-two input,
+    .contact-me-section .container .box-container .box-two textarea {
+        width: 350px;
+    }
+}
+
+
+/* contact me ends */
